@@ -2,7 +2,9 @@
 A list of useful commands on PLCnext terminal
 
 ## FW update (*.raucb file placed in /opt/plcnext)
+```
 sudo update-axcf2152
+```
 
 ## Check firmware version:
 cat /etc/plcnext/arpversion
