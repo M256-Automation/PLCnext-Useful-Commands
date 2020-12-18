@@ -1,19 +1,19 @@
 # __PLCnext Useful Commands__
 A list of useful commands on PLCnext terminal
 
-## FW update (dopo aver copiato il file *.raucb in /opt/plcnext)
+## FW update (*.raucb file placed in /opt/plcnext)
 sudo update-axcf2152
 
-## check firmware version:
+## Check firmware version:
 cat /etc/plcnext/arpversion
 
 ## Reboot
 sudo reboot
 
-## Reset without deleting FW update
+## Reset 1 - without deleting FW update
 sudo recover-axcf2152 1      
 
-## Reset deleting FW update - factory default - tutto quello che hai messo nel PLC viene cancellato
+## Reset 2 - deleting FW update - factory default
 sudo recover-axcf2152 2      
 
 ## PLC start/stop/restart
@@ -23,40 +23,41 @@ sudo /etc/init.d/plcnext stop
 
 sudo /etc/init.d/plcnext restart
 
-## Check log file in diretta:
+## Check log file as stream:
 tail -f -n 20 /opt/plcnext/logs/Output.log
 
-dove "-n 20" significa che vengono mostrate subito le ultime 20 righe del file 
+where "-n 20" is the number of previous lines to show 
 
-## Transfer C++ libraries .so, move file in /usr/local/lib and then
+## Transfer C++ cross-compiled libraries .so
+move file in /usr/local/lib and then
 cd /usr/local/lib
 ln -sf _nomelibreria_.so
 sudo ldconfig
 
-## Assegnazione IP
+## IP Assignment
 ifconfig eth0 192.168.1.x netmask 255.255.255.0
 
-## Assegnazione gateway
+## Gateway Assignment
 route add default gateway 192.168.1.1
 
-## Assegnazione DNS
+## DNS Assignment
 sudo echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
-## Quale DNS è configurato?
+## DNS Check?
 $ cat /etc/resolv.conf 
 
-## Cercare file
+## File search
 find . -name tecmint.txt
 
-cerca il file nella cartella corrente e tutte le sue sottocartelle
+Looks in the current directory and all sub-directories
 
-lanciato come _root_ ha libero accesso a tutte le cartelle 
+With _root_ you can search in _every_ directory
 
-## guix
+## Guix
 guix package  --search=zabbix
 
 guix install zabbix-agentd
 
-## memory
+## Memory Check
 top
 
