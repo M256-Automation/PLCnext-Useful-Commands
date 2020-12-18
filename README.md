@@ -1,6 +1,8 @@
 # __PLCnext Useful Commands__
 A list of useful commands on PLCnext terminal
 
+
+
 ### FW update (*.raucb file placed in /opt/plcnext)
 ```
 sudo update-axcf2152
@@ -41,11 +43,10 @@ sudo /etc/init.d/plcnext restart
 ```
 tail -f -n 20 /opt/plcnext/logs/Output.log
 ```
-
 where "-n 20" is the number of previous lines to show 
 
 ### Transfer C++ cross-compiled libraries .so
-move file in /usr/local/lib and then
+Move file in /usr/local/lib and then
 ```
 cd /usr/local/lib
 ln -sf _nomelibreria_.so
@@ -86,7 +87,7 @@ guix package  --search=zabbix
 guix install zabbix-agentd
 ```
 
-## Memory Check
+### Memory Check
 ```
 top
 ```
