@@ -97,8 +97,10 @@ For the following commands thanks to
 https://github.com/plcnextusa/PLCnext-Guides/blob/master/Useful%20Linux%20Commands
 
 
-##Grant root access to an user:
-  usermod -aG sudo username
+### Grant root access to an user:
+```
+usermod -aG sudo username
+```
 
 ##Give SSH rights to root:
   nano /etc/ssh/sshd_config   (remove comment # from the line which says permit root login yes)
