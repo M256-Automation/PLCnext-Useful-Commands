@@ -176,12 +176,13 @@ cat /etc/device_data/phoenixsign/cloud_uuid
 cat /etc/device_data/phoenixsign/production_data
 ```
 ### Change the timezone of the PLCnext to local time zone
-  # Viewing available timezones:
+
+#### Viewing available timezones:
   ```
   cd /usr/share/zoneinfo
   ls
 ```
-###  Re-Link the correct timezone:
+####  Re-Link the correct timezone:
   ```
   sudo unlink /etc/localtime 
   sudo ln -s /usr/share/zoneinfo/[ZONE NAME HERE] /etc/localtime
