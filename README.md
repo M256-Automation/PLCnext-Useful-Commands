@@ -93,6 +93,14 @@ top
 ```
 
 
+### Check Profinet Name
+if you can log in to the PLC then you can take a look at the contents of this file:
+```
+nano /opt/plcnext/config/Io/PnS/PnS.local.config
+```
+
+
+
 For the following commands thanks to: https://github.com/plcnextusa/PLCnext-Guides/blob/master/Useful%20Linux%20Commands
 
 
