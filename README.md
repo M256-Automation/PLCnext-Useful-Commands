@@ -108,6 +108,8 @@ nano /opt/plcnext/config/Io/PnS/PnS.local.config
 netstat -tn 2>/dev/null | grep -E '\s[0-9.]+:80\s' | awk '{print $5}' | cut -d : -f 1 | sort | uniq -c | sort -nr
 ```
 Where:
+| command                 | description                                   |
+|-------------------------|-----------------------------------------------|
 | netstat -tn 2>/dev/null	| returns informations all tcp/tcp6 connections |
 |grep -E '\s[0-9.]+:80\s'	| filters rows that contains ip addres with 80 port using regular expressions |
 |awk '{print $5}'	| prints only column 5th that is described as "Foreign Address" that contains connected client ip address with his remote port|
@@ -115,7 +117,7 @@ Where:
 |sort	| sorts rows to let them to be counted with next command (uniq command)|
 |uniq -c	| counts (-c) neighbouring rows and print them as: number_of_rows row_text|
 |sort -nr	| makes numeric sort (-n) and reverse result (-r) |
-
+|-------------------------|-----------------------------------------------|
 
 
 For the following commands thanks to: https://github.com/plcnextusa/PLCnext-Guides/blob/master/Useful%20Linux%20Commands
