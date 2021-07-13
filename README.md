@@ -117,7 +117,9 @@ Where:
 |sort	| sorts rows to let them to be counted with next command (uniq command)|
 |uniq -c	| counts (-c) neighbouring rows and print them as: number_of_rows row_text|
 |sort -nr	| makes numeric sort (-n) and reverse result (-r) |
-|-------------------------|-----------------------------------------------|
+
+
+---------------------------------------------------------------------------------------------------------------------------
 
 
 For the following commands thanks to: https://github.com/plcnextusa/PLCnext-Guides/blob/master/Useful%20Linux%20Commands
