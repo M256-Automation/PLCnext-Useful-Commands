@@ -12,6 +12,12 @@ sudo update-axcf2152
 ```
 cat /etc/plcnext/arpversion
 ```
+ot, to get only the basic info
+
+```
+cat /etc/plcnext/arpversion | grep -i Arpversion | awk '{print $2}'
+```
+
 
 ### Reboot
 ```
