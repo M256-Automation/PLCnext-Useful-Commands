@@ -125,6 +125,29 @@ Where:
 |sort -nr	| makes numeric sort (-n) and reverse result (-r) |
 
 
+
+### Ora attuale
+```
+date
+```
+
+
+### Ora in UTC
+```
+date -u
+```
+
+### Ora e la timezone (come testo e come variazione oraria)
+```
+date +"%Z %z"
+```
+
+### Timezone configurata come zona geografica
+```
+cat /etc/timezone
+```
+
+
 ---------------------------------------------------------------------------------------------------------------------------
 
 
